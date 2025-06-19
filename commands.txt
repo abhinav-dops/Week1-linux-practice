@@ -1,0 +1,82 @@
+# Week 1: Essential Linux Commands
+
+# ------------------------
+# Navigation & Path Commands
+# ------------------------
+pwd                      # Print current directory
+cd /path/to/folder       # Change to specified directory
+cd ..                    # Move up one level
+cd ~                     # Go to home directory
+cd -                     # Switch to previous directory
+
+# ------------------------
+# Listing Files
+# ------------------------
+ls                       # List directory contents
+ls -l                    # Long listing format
+ls -a                    # Show hidden files
+ls -lh                   # Human-readable file sizes
+ls -la                   # List all with details
+
+# ------------------------
+# File & Directory Operations
+# ------------------------
+touch file.txt           # Create empty file
+mkdir foldername         # Create directory
+mkdir -p a/b/c           # Create nested directories
+rm file.txt              # Delete file
+rm -r folder/            # Delete folder recursively
+rm -rf folder/           # Force delete without prompt
+mv file1 file2           # Rename or move file
+cp file1 backup/         # Copy file to folder
+cp -r dir1 dir2          # Copy directory recursively
+
+# ------------------------
+# Viewing File Contents
+# ------------------------
+cat file.txt             # Display entire file
+less file.txt            # Scrollable file viewer
+head file.txt            # First 10 lines
+tail file.txt            # Last 10 lines
+tail -f log.txt          # Follow file updates in real-time
+
+# ------------------------
+# Searching Text
+# ------------------------
+grep "search" file.txt         # Search for word in file
+grep -i "word" *.log           # Case-insensitive search
+grep -r "error" /var/log/      # Recursive search
+
+# ------------------------
+# Permissions & Ownership
+# ------------------------
+chmod +x script.sh             # Make script executable
+chmod 755 file.sh              # rwxr-xr-x
+chmod -R 644 *.txt             # Recursive permission change
+ls -l                          # Check file permissions
+
+# ------------------------
+# System Info & Disk Usage
+# ------------------------
+df -h                          # Disk space in human-readable form
+du -sh folder/                 # Folder size summary
+free -h                       # Memory usage
+uname -a                      # System info
+whoami                        # Show current user
+hostname                      # Show system hostname
+
+# ------------------------
+# File Search
+# ------------------------
+find . -name "*.txt"           # Find .txt files in current dir
+find /etc -type f -name "*.conf"  # Find config files
+
+# ------------------------
+# Miscellaneous Useful Commands
+# ------------------------
+history                       # Show command history
+clear                         # Clear terminal screen
+alias ll="ls -l"              # Create command alias
+date                          # Show current date/time
+man ls                        # Manual for `ls` command
+

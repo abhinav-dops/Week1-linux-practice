@@ -1,0 +1,54 @@
+# Week 1 - Linux Directory & File Structure Overview
+
+# Sample directory tree (output of `tree`)
+Week1-Linux-Practice/
+├── README.md
+├── linux-commands.txt
+├── notes.md
+├── structure.txt
+├── scripts/
+│   ├── hello.sh
+│   ├── cleanup.sh
+├── files/
+│   ├── data.txt
+│   ├── config.cfg
+│   ├── .hiddenfile
+└── test/
+    ├── test1.txt
+    └── test2.txt
+
+# ----------------------------
+# Output of `ls -l` in Week1-Linux-Practice/
+# ----------------------------
+-rw-r--r-- 1 user user  2048 Jun 17 10:30 README.md
+-rw-r--r-- 1 user user  3096 Jun 17 10:32 linux-commands.txt
+-rw-r--r-- 1 user user  1572 Jun 17 10:33 notes.md
+-rw-r--r-- 1 user user   980 Jun 17 10:34 structure.txt
+drwxr-xr-x 2 user user  4096 Jun 17 10:35 scripts
+drwxr-xr-x 2 user user  4096 Jun 17 10:35 files
+drwxr-xr-x 2 user user  4096 Jun 17 10:36 test
+
+# ----------------------------
+# Output of `ls -a` in /files
+# ----------------------------
+.            ..           data.txt      config.cfg    .hiddenfile
+
+# ----------------------------
+# File descriptions (what these are used for)
+# ----------------------------
+README.md              => Summary of what you've learned in Week 1
+linux-commands.txt     => Master list of Linux commands practiced
+notes.md               => Concepts, permission notes, and extra explanations
+structure.txt          => Directory structure and ls/tree command outputs
+scripts/               => Your practice Bash scripts
+files/                 => Example files for testing commands
+test/                  => Sample files for practicing search, permissions, etc.
+
+# ----------------------------
+# Common test commands used on this structure
+# ----------------------------
+ls -l files/           => View file details
+chmod +x scripts/*.sh  => Make scripts executable
+cat files/data.txt     => View file content
+rm -r test/            => Remove test directory
+find . -name "*.txt"   => Find all .txt files recursively
